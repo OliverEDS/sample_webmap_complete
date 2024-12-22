@@ -1,0 +1,134 @@
+#map { 
+  height: 85vh;
+  margin-left: 350px;
+  transition: 0.5s;
+}
+
+#body {
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.main {
+  transition: margin-left .5s;
+  margin-left: 350px;
+  background-color: #009260;
+  font-family: sans-serif;
+  color:#ffffff;
+  height: auto;
+
+}
+
+.header-container {
+  display: flex;
+  height: 5vh;
+  align-items: center;
+  padding: 10px;
+  background-color: #009260;
+}
+
+.header-container h1 {
+  padding-left: 0px;
+  transition: 0.5s
+}
+
+.sidepanel {
+  height: 100%;
+  width: 300px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  font-family: sans-serif;
+  transition: 0.5s;
+  overflow-x: hidden;
+  z-index: 1;
+  position: fixed;
+}
+
+.sidepanel h2 {
+  padding-top: 50px;
+}
+
+.closeBtn {
+  font-size: 30px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  color: #009260;
+  display: block;
+  background-color: #f7f7f7;
+  position: fixed;
+  z-index: 3;
+  padding: 20px;
+  width: 80px;
+  height: 80px;
+  transition: 0.3s
+}
+
+.openBtn {
+  font-size: 30px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  background-color: #009260;
+  position: fixed;
+  z-index: 2;
+  padding: 20px;
+  width: 80px;
+  height: 80px;
+  transition: 0s;
+  transition-delay: 0.5s;
+}
+
+.footer {
+  background-color: #ffffff;
+  color: #009260;
+  font-family: sans-serif;
+  font-style: bold;
+  text-align: right;
+  padding: 10px;
+  margin-left: 350px;
+  transition: 0.5s;
+  height: auto;
+}
+
+/* Leaflet crispness override */
+.leaflet-container .leaflet-overlay-pane svg,
+.leaflet-container .leaflet-marker-pane img,
+.leaflet-container .leaflet-shadow-pane img,
+.leaflet-container .leaflet-tile-pane img,
+.leaflet-container img.leaflet-image-layer {
+  max-width: none !important;
+  /* Preserve crisp pixels with scaled up images */
+  image-rendering: optimizeSpeed;             /* Legal fallback */
+  image-rendering: -moz-crisp-edges;          /* Firefox        */
+  image-rendering: -o-crisp-edges;            /* Opera          */
+  image-rendering: -webkit-optimize-contrast; /* Safari         */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed  */
+  image-rendering: crisp-edges;               /* CSS4 Proposed  */
+  image-rendering: pixelated;                 /* CSS4 Proposed  */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+           */
+}
+
+#mySidepanel img {
+  width: 95%;
+  height: auto;
+  display: block; 
+  margin: 0;
+}
+
+#mySidepanel figcaption {
+  font-size: 12px;
+  font-weight: lighter;
+  text-align: left;
+  display: block; 
+  margin: 0;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
